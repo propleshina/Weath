@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/cityInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="City"
+        android:inputType="text"
+        android:textColor="@color/purple_200"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#000000"
+        android:background="@drawable/rounded_border"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/getWeatherButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Get weather"
+            android:background="@drawable/rounded_button"
+            />
+
+        <Button
+            android:id="@+id/getFetchWeatherButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get weather by geo"
+            android:background="@drawable/rounded_button"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/purple_700"/>
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        android:textSize="36sp"
+        android:gravity="center"
+        android:textColor="@color/purple_700"
+        />
+
+    <TextView
+        android:id="@+id/weatherDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weather description"
+        android:gravity="center"
+        android:textColor="@color/purple_700"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/forecastRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/item_forecast" />
+</LinearLayout>
